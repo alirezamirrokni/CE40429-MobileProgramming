@@ -9,17 +9,13 @@ import kotlinx.coroutines.runBlocking
 import java.io.File
 
 data class GitHubRepoResponse(val name: String)
-
 data class GitHubUserResponse(
     val login: String,
     val followers: Int,
     val following: Int,
-    @SerializedName("created_at")
-    val createdAt: String
+    @SerializedName("created_at") val createdAt: String
 )
-
 data class GitHubRepo(val name: String)
-
 data class GitHubUser(
     val username: String,
     val followers: Int,
@@ -86,7 +82,7 @@ object FileCacheManager {
                     users = userList.associateBy { it.username }.toMutableMap()
                 }
             } catch (e: Exception) {
-                println("[Error] Failed to load cache: ${e.message}")
+                println("❌ [Error] Failed to load cache: ${e.message}")
             }
         }
     }
@@ -97,7 +93,7 @@ object FileCacheManager {
             val json = gson.toJson(users.values.toList())
             file.writeText(json)
         } catch (e: Exception) {
-            println("[Error] Failed to save cache: ${e.message}")
+            println("❌ [Error] Failed to save cache: ${e.message}")
         }
     }
 
@@ -110,121 +106,157 @@ object FileCacheManager {
 
     fun findUserByUsername(username: String): GitHubUser? = users[username]
 
-    fun searchUsersByRepoName(repoName: String): List<GitHubUser> {
+    fun advancedSearchByUsername(query: String, minFollowers: Int?): List<GitHubUser> {
         return users.values.filter { user ->
-            user.repositories.any { it.name.contains(repoName, ignoreCase = true) }
+            user.username.contains(query, ignoreCase = true) &&
+                    (minFollowers == null || user.followers >= minFollowers)
+        }
+    }
+
+    fun advancedSearchByRepoName(repoName: String, minMatches: Int?): List<GitHubUser> {
+        return users.values.filter { user ->
+            val matchCount = user.repositories.count { it.name.contains(repoName, ignoreCase = true) }
+            matchCount > 0 && (minMatches == null || matchCount >= minMatches)
         }
     }
 }
 
-fun printHeader() {
-    println("=======================================")
-    println("         GitHub User Fetcher           ")
-    println("=======================================")
-}
+object ConsoleUI {
+    const val LINE = "======================================="
 
-fun printMenu() {
-    println(
-        """
-        1. Fetch GitHub user information by username
-        2. Display all saved users
-        3. Search for a user by username
-        4. Search for users by repository name
-        5. Exit
-        """.trimIndent()
-    )
-    println("=======================================")
-}
-
-fun printUser(user: GitHubUser) {
-    println("Username         : ${user.username}")
-    println("Followers        : ${user.followers}")
-    println("Following        : ${user.following}")
-    println("Account Created  : ${user.createdAt}")
-    println("Repositories     :")
-    if (user.repositories.isEmpty()) {
-        println("   No repositories available.")
-    } else {
-        user.repositories.forEach { println("   - ${it.name}") }
+    fun printHeader() {
+        println()
+        println("🔥 $LINE 🔥")
+        println("         🤖 GitHub User Fetcher Pro 🤖         ")
+        println("🔥 $LINE 🔥")
+        println()
     }
-    println("=======================================")
+
+    fun printMenu() {
+        println("💡 1. Fetch GitHub user information by username")
+        println("💡 2. Display all saved users")
+        println("💡 3. Advanced Search for a user by username")
+        println("💡 4. Advanced Search for users by repository name")
+        println("💡 5. Exit")
+        println(LINE)
+        println()
+    }
+
+    fun prompt(message: String): String {
+        print("👉 $message: ")
+        return readLine()?.trim() ?: ""
+    }
+
+    fun printUser(user: GitHubUser) {
+        println("⭐ Username         : ${user.username}")
+        println("⭐ Followers        : ${user.followers}")
+        println("⭐ Following        : ${user.following}")
+        println("⭐ Account Created  : ${user.createdAt}")
+        println("⭐ Repositories     :")
+        if (user.repositories.isEmpty()) {
+            println("   😞 No repositories available.")
+        } else {
+            user.repositories.forEach {
+                println("   📦 - ${it.name}")
+            }
+        }
+        println(LINE)
+        println()
+    }
 }
 
 fun main() = runBlocking {
     val gitHubService = GitHubService()
 
     while (true) {
-        printHeader()
-        printMenu()
-        print("Your choice: ")
-        when (readLine()?.trim()) {
+        ConsoleUI.printHeader()
+        ConsoleUI.printMenu()
+
+        when (ConsoleUI.prompt("Your choice")) {
             "1" -> {
-                print("Enter GitHub username: ")
-                val username = readLine()?.trim() ?: ""
+                val username = ConsoleUI.prompt("Enter GitHub username")
                 if (username.isEmpty()) {
-                    println("\n[Error] Username cannot be empty!\n")
+                    println("❌ [Error] Username cannot be empty!\n")
                     continue
                 }
-                if (FileCacheManager.findUserByUsername(username) != null) {
-                    println("\n[Info] User '$username' is already saved.\n")
-                } else {
-                    println("\nFetching data for user '$username'...\n")
-                    val result = gitHubService.fetchUser(username)
-                    result.fold(
-                        onSuccess = { user ->
-                            FileCacheManager.addUser(user)
-                            println("[Success] User data fetched successfully:")
-                            printUser(user)
-                        },
-                        onFailure = { error ->
-                            println("[Error] Failed to fetch user data: ${error.message}\n")
-                        }
-                    )
+                val cachedUser = FileCacheManager.findUserByUsername(username)
+                if (cachedUser != null) {
+                    println("ℹ️ [Info] User '$username' is already saved.")
+                    val updateChoice = ConsoleUI.prompt("🔄 Update the user data? (Y/n)")
+                    if (updateChoice.lowercase() != "y" && updateChoice != "") {
+                        println("ℹ️ [Info] Skipping update for '$username'.\n")
+                        continue
+                    }
                 }
+                println("🚀 Fetching data for user '$username'...\n")
+                val result = gitHubService.fetchUser(username)
+                result.fold(
+                    onSuccess = { user ->
+                        FileCacheManager.addUser(user)
+                        println("✅ [Success] User data fetched successfully:")
+                        println()
+                        ConsoleUI.printUser(user)
+                    },
+                    onFailure = { error ->
+                        println("❌ [Error] Failed to fetch user data: ${error.message}\n")
+                    }
+                )
             }
             "2" -> {
                 val users = FileCacheManager.getAllUsers()
                 if (users.isEmpty()) {
-                    println("\n[Info] No users saved yet.\n")
+                    println("ℹ️ [Info] No users saved yet.\n")
                 } else {
-                    println("\n[Saved Users]")
-                    users.forEach { user -> printUser(user) }
+                    val sortOption = ConsoleUI.prompt("Sort users by: [1] Username (A-Z), [2] Followers (desc), [other] Unsorted")
+                    val sortedUsers = when (sortOption) {
+                        "1" -> users.sortedBy { it.username.lowercase() }
+                        "2" -> users.sortedByDescending { it.followers }
+                        else -> users
+                    }
+                    println("📚 [Saved Users]")
+                    println()
+                    sortedUsers.forEach { ConsoleUI.printUser(it) }
                 }
             }
             "3" -> {
-                print("Enter username to search: ")
-                val searchUsername = readLine()?.trim() ?: ""
-                val user = FileCacheManager.findUserByUsername(searchUsername)
-                if (user != null) {
-                    println("\n[User Found]")
-                    printUser(user)
+                val query = ConsoleUI.prompt("Enter full or partial username to search")
+                val minFollowersInput = ConsoleUI.prompt("Enter minimum followers count (or leave blank)")
+                val minFollowers = minFollowersInput.toIntOrNull()
+                val matchingUsers = FileCacheManager.advancedSearchByUsername(query, minFollowers)
+                if (matchingUsers.isEmpty()) {
+                    println("ℹ️ [Info] No users found matching the criteria.\n")
                 } else {
-                    println("\n[Info] User not found.\n")
+                    println("🔍 [Advanced Search Results]")
+                    println()
+                    matchingUsers.forEach { ConsoleUI.printUser(it) }
                 }
             }
             "4" -> {
-                print("Enter repository name to search: ")
-                val repoName = readLine()?.trim() ?: ""
-                val matchedUsers = FileCacheManager.searchUsersByRepoName(repoName)
-                if (matchedUsers.isEmpty()) {
-                    println("\n[Info] No users found with a matching repository.\n")
+                val repoName = ConsoleUI.prompt("Enter repository name or keyword to search")
+                val minMatchesInput = ConsoleUI.prompt("Enter minimum number of matching repositories (or leave blank)")
+                val minMatches = minMatchesInput.toIntOrNull()
+                val matchingUsers = FileCacheManager.advancedSearchByRepoName(repoName, minMatches)
+                if (matchingUsers.isEmpty()) {
+                    println("ℹ️ [Info] No users found with matching repository criteria.\n")
                 } else {
-                    println("\n[Users with Matching Repository]")
-                    matchedUsers.forEach { user ->
-                        println("Username: ${user.username}")
-                        println("Matching Repositories:")
+                    println("🔍 [Advanced Repository Search Results]")
+                    println()
+                    matchingUsers.forEach { user ->
+                        println("⭐ Username: ${user.username}")
+                        println("⭐ Matching Repositories:")
                         user.repositories.filter { it.name.contains(repoName, ignoreCase = true) }
-                            .forEach { println("   - ${it.name}") }
-                        println("=======================================")
+                            .forEach { println("   📦 - ${it.name}") }
+                        println(ConsoleUI.LINE)
+                        println()
                     }
                 }
             }
             "5" -> {
-                println("\nExiting the application. Goodbye!")
+                println("👋 Exiting the application. Goodbye!")
                 break
             }
             else -> {
-                println("\n[Error] Invalid option. Please try again.\n")
+                println("❌ [Error] Invalid option. Please try again.\n")
             }
         }
         println()

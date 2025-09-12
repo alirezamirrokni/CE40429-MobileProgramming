@@ -1,4 +1,3 @@
-#!/usr/bin/env swift
 import Foundation
 
 func readTrimmedLine() -> String? {
@@ -73,7 +72,6 @@ func printHeader() {
 \(bold)\(cyan)========================================\(reset)
 \(bold)\(green)🎯 Mastermind — Terminal Edition\(reset)
 \(cyan)========================================\(reset)
-\(yellow)A professional, friendly terminal game with emojis, hints, and history.\(reset)
 Commands: type a 4-digit guess (digits 1..6). Type \(bold)exit\(reset) to quit, \(bold)hint\(reset) for a hint, \(bold)giveup\(reset) to reveal the code.
 """)
 }
@@ -143,17 +141,13 @@ func playOneRound(secret: [Int]) {
                 print("\(yellow)No more hints available. Maximum \(maxHints) hints used.\(reset)")
                 continue
             }
-            var unrevealed = [Int]()
-            for i in 0..<4 {
-                unrevealed.append(secret[i])
-            }
             let revealedIndex = Int.random(in: 0..<4)
             print("\(cyan)🔎 Hint: Digit at position \(revealedIndex+1) is \(secret[revealedIndex]). (\(hintGiven+1)/\(maxHints) hints used)\(reset)")
             hintGiven += 1
             continue
         }
         if lower == "giveup" {
-            print("\n\(redText(\"⚠️ Reveal\")) The secret code was \(secret.map(String.init).joined()).")
+            print("\n\(redText("⚠️ Reveal")) The secret code was \(secret.map(String.init).joined()).")
             break
         }
         if let guess = parseDigits(line) {
@@ -176,7 +170,7 @@ func playOneRound(secret: [Int]) {
                 }
             }
         } else {
-            print("\(redText(\"✖ Invalid guess\")) Enter exactly 4 digits between 1 and 6, or a command like \(bold)hint\(reset).")
+            print("\(redText("✖ Invalid guess")) Enter exactly 4 digits between 1 and 6, or a command like \(bold)hint\(reset).")
         }
     }
 }

@@ -1,0 +1,327 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = { };
+	objectVersion = 55;
+	objects = {
+/* Custom Frameworks Group */
+
+/* Begin PBXFileReference section */
+	8081033A499DDC600D5CAB4F = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = <group>; };
+	1B8D1BF391139E0551E2D88C = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+	E6BAAE02D587593B9F379B3A = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileReference section */
+	7179E54A1ECA89AE0F6BA57C = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = <group>; };
+	1B8D1BF391139E0551E2D88C = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+	E6BAAE02D587593B9F379B3A = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileReference section */
+	FE29EBA0E22BE6C2425BE6AF = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = <group>; };
+	1B8D1BF391139E0551E2D88C = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+	E6BAAE02D587593B9F379B3A = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileReference section */
+	A7189F1DC0E36823D0669A7F = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = <group>; };
+	1B8D1BF391139E0551E2D88C = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+	E6BAAE02D587593B9F379B3A = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+	515ABBB1AE42537ABA116E89 = {isa = PBXGroup; children = (1B8D1BF391139E0551E2D88C, E6BAAE02D587593B9F379B3A, ); name = Frameworks; sourceTree = "<group>"; };
+
+	2692D65386FF28F153FFA4A1 = { isa = PBXGroup; children = ( FE29EBA0E22BE6C2425BE6AF, A7189F1DC0E36823D0669A7F ); path = Data/API; sourceTree = <group>; name = API; };
+/* End PBXGroup section */
+
+/* Begin PBXFileReference section */
+	A5E4EAB9002407148F152EAA = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = <group>; };
+	1B8D1BF391139E0551E2D88C = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+	E6BAAE02D587593B9F379B3A = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileReference section */
+	75639D24D4FC1425DF8A4EC8 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = <group>; };
+	1B8D1BF391139E0551E2D88C = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+	E6BAAE02D587593B9F379B3A = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+	6A94C4BF6CA202ABCD50387C = { isa = PBXGroup; children = ( A5E4EAB9002407148F152EAA, 75639D24D4FC1425DF8A4EC8 ); path = Data/Auth; sourceTree = <group>; name = Auth; };
+/* End PBXGroup section */
+
+/* Begin PBXFileReference section */
+	AE956118939B54BFE22AF210 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = <group>; };
+	1B8D1BF391139E0551E2D88C = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+	E6BAAE02D587593B9F379B3A = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+	8351EF4EDEB4919776761CF9 = { isa = PBXGroup; children = ( AE956118939B54BFE22AF210 ); path = Data/Persistence; sourceTree = <group>; name = Persistence; };
+/* End PBXGroup section */
+
+/* Begin PBXFileReference section */
+	E99D0D3B2924B69BD854EA81 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = <group>; };
+	1B8D1BF391139E0551E2D88C = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+	E6BAAE02D587593B9F379B3A = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+	697E26F597B95A69AF27CA19 = { isa = PBXGroup; children = ( 2692D65386FF28F153FFA4A1, 6A94C4BF6CA202ABCD50387C, 8351EF4EDEB4919776761CF9, E99D0D3B2924B69BD854EA81 ); path = Data; sourceTree = <group>; name = Data; };
+/* End PBXGroup section */
+
+/* Begin PBXFileReference section */
+	91E6EB39128545201D119EB7 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = <group>; };
+	1B8D1BF391139E0551E2D88C = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+	E6BAAE02D587593B9F379B3A = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileReference section */
+	E6DD7617AF45E97F4C9042B3 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = <group>; };
+	1B8D1BF391139E0551E2D88C = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+	E6BAAE02D587593B9F379B3A = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileReference section */
+	51F01954BD4ABEDB807EC3F3 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = <group>; };
+	1B8D1BF391139E0551E2D88C = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+	E6BAAE02D587593B9F379B3A = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+	A04CED89A29A3ED0B26A7CBF = { isa = PBXGroup; children = ( 91E6EB39128545201D119EB7, E6DD7617AF45E97F4C9042B3, 51F01954BD4ABEDB807EC3F3 ); path = UI/Auth; sourceTree = <group>; name = Auth; };
+/* End PBXGroup section */
+
+/* Begin PBXFileReference section */
+	BA31E534E1254A9095F77964 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = <group>; };
+	1B8D1BF391139E0551E2D88C = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+	E6BAAE02D587593B9F379B3A = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+	78BD17964240AD9A5DDE37A3 = { isa = PBXGroup; children = ( BA31E534E1254A9095F77964 ); path = UI/Home; sourceTree = <group>; name = Home; };
+/* End PBXGroup section */
+
+/* Begin PBXFileReference section */
+	5CB20A414FC06DFE4AF5EB26 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailView.swift; sourceTree = <group>; };
+	1B8D1BF391139E0551E2D88C = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+	E6BAAE02D587593B9F379B3A = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileReference section */
+	889CBF0A2FE9711D86B69B11 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNoteView.swift; sourceTree = <group>; };
+	1B8D1BF391139E0551E2D88C = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+	E6BAAE02D587593B9F379B3A = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+	D3433F90256C0166F168B9CA = { isa = PBXGroup; children = ( 5CB20A414FC06DFE4AF5EB26, 889CBF0A2FE9711D86B69B11 ); path = UI/Notes; sourceTree = <group>; name = Notes; };
+/* End PBXGroup section */
+
+/* Begin PBXFileReference section */
+	77427F330C7D6C0E4F0DFFD3 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = <group>; };
+	1B8D1BF391139E0551E2D88C = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+	E6BAAE02D587593B9F379B3A = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+	5AB39CA7966620D191BA2723 = { isa = PBXGroup; children = ( 77427F330C7D6C0E4F0DFFD3 ); path = UI/Settings; sourceTree = <group>; name = Settings; };
+/* End PBXGroup section */
+
+/* Begin PBXFileReference section */
+	03F629B02D3F4ED3CD92CAA2 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = <group>; };
+	1B8D1BF391139E0551E2D88C = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+	E6BAAE02D587593B9F379B3A = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+	D5454E55F79555264274BCA9 = { isa = PBXGroup; children = ( A04CED89A29A3ED0B26A7CBF, 78BD17964240AD9A5DDE37A3, D3433F90256C0166F168B9CA, 5AB39CA7966620D191BA2723, 03F629B02D3F4ED3CD92CAA2 ); path = UI; sourceTree = <group>; name = UI; };
+/* End PBXGroup section */
+
+/* Begin PBXFileReference section */
+	A711DC0508312CA79963BB76 = { isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = <group>; };
+	1B8D1BF391139E0551E2D88C = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+	E6BAAE02D587593B9F379B3A = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileReference section */
+	ACE9C39B4EC9529BDE1EF030 = { isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = <group>; };
+	1B8D1BF391139E0551E2D88C = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+	E6BAAE02D587593B9F379B3A = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+	FE99F176EDBDEBFAAF2E8A44 = { isa = PBXGroup; children = ( 8081033A499DDC600D5CAB4F, 7179E54A1ECA89AE0F6BA57C, 697E26F597B95A69AF27CA19, D5454E55F79555264274BCA9, A711DC0508312CA79963BB76, ACE9C39B4EC9529BDE1EF030 ); path = None; sourceTree = <group>; name = SimpleNoteSwift; };
+/* End PBXGroup section */
+
+/* Begin PBXGroup section */
+	BB4ED005FC7DB2B72B148931 = { isa = PBXGroup; children = ( FE99F176EDBDEBFAAF2E8A44, FE01BA5E1D72439BA221666E  515ABBB1AE42537ABA116E89,); sourceTree = <group>; };
+/* End PBXGroup section */
+
+/* Begin PBXFileReference section */
+	1DC20A0AC820D8E78CFCAC0F = { isa = PBXFileReference; explicitFileType = wrapper.application; path = SimpleNoteSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+	1B8D1BF391139E0551E2D88C = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+	E6BAAE02D587593B9F379B3A = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+	FE01BA5E1D72439BA221666E = { isa = PBXGroup; children = ( 1DC20A0AC820D8E78CFCAC0F ); name = Products; sourceTree = <group>; };
+/* End PBXGroup section */
+
+/* Begin PBXSourcesBuildPhase section */
+	C1862110F0538B8BE470CBF9 = { isa = PBXSourcesBuildPhase; files = ( 1A58A53188BD057AAC709F16, B9A8D06F88FD903AA3398E90, AAB95A45F5AA638EBC794D52, 6BA4B8D9A08A98AEC8FE9E6C, 351D82CE9D37BDFC00761135, 30F634706FC72814C9B65049, C68E3181138AFA7D90A5601F, C4001420939B9F0C085F846E, 67E21873D2F13BE081EA8A4B, 5B029A5F12A7E8BA26CC4531, EFCA164F3F1F7157D655AF87, 0F246896A7C926EC439FFCB7, 2D70C0B50522155E70FFF42C, D1452DE6B582E2DA28599FDC, A00C0324F532560BBEB3F85C, 2EE64B1D458A31AC85A34968 ); buildActionMask = 2147483647; runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXResourcesBuildPhase section */
+	A4C9CBF8919422A911CE06D8 = { isa = PBXResourcesBuildPhase; files = ( BFD3A0790DE77F8E7874F524, FB1E1EF03DE5ACD03EE0ADBE ); buildActionMask = 2147483647; runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXFrameworksBuildPhase section */
+	A4592280DBD5D46DF4602A6B = { isa = PBXFrameworksBuildPhase; files = (  , 5AF3BC2A413A2E6FD1DE2BEE, FA5026E43C0F0989AA71698C); buildActionMask = 2147483647; runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXBuildFile section */
+	1A58A53188BD057AAC709F16 = { isa = PBXBuildFile; fileRef = 8081033A499DDC600D5CAB4F; };
+	5AF3BC2A413A2E6FD1DE2BEE = {isa = PBXBuildFile; fileRef = 1B8D1BF391139E0551E2D88C; };
+	FA5026E43C0F0989AA71698C = {isa = PBXBuildFile; fileRef = E6BAAE02D587593B9F379B3A; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildFile section */
+	B9A8D06F88FD903AA3398E90 = { isa = PBXBuildFile; fileRef = 7179E54A1ECA89AE0F6BA57C; };
+	5AF3BC2A413A2E6FD1DE2BEE = {isa = PBXBuildFile; fileRef = 1B8D1BF391139E0551E2D88C; };
+	FA5026E43C0F0989AA71698C = {isa = PBXBuildFile; fileRef = E6BAAE02D587593B9F379B3A; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildFile section */
+	AAB95A45F5AA638EBC794D52 = { isa = PBXBuildFile; fileRef = FE29EBA0E22BE6C2425BE6AF; };
+	5AF3BC2A413A2E6FD1DE2BEE = {isa = PBXBuildFile; fileRef = 1B8D1BF391139E0551E2D88C; };
+	FA5026E43C0F0989AA71698C = {isa = PBXBuildFile; fileRef = E6BAAE02D587593B9F379B3A; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildFile section */
+	6BA4B8D9A08A98AEC8FE9E6C = { isa = PBXBuildFile; fileRef = A7189F1DC0E36823D0669A7F; };
+	5AF3BC2A413A2E6FD1DE2BEE = {isa = PBXBuildFile; fileRef = 1B8D1BF391139E0551E2D88C; };
+	FA5026E43C0F0989AA71698C = {isa = PBXBuildFile; fileRef = E6BAAE02D587593B9F379B3A; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildFile section */
+	351D82CE9D37BDFC00761135 = { isa = PBXBuildFile; fileRef = A5E4EAB9002407148F152EAA; };
+	5AF3BC2A413A2E6FD1DE2BEE = {isa = PBXBuildFile; fileRef = 1B8D1BF391139E0551E2D88C; };
+	FA5026E43C0F0989AA71698C = {isa = PBXBuildFile; fileRef = E6BAAE02D587593B9F379B3A; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildFile section */
+	30F634706FC72814C9B65049 = { isa = PBXBuildFile; fileRef = 75639D24D4FC1425DF8A4EC8; };
+	5AF3BC2A413A2E6FD1DE2BEE = {isa = PBXBuildFile; fileRef = 1B8D1BF391139E0551E2D88C; };
+	FA5026E43C0F0989AA71698C = {isa = PBXBuildFile; fileRef = E6BAAE02D587593B9F379B3A; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildFile section */
+	C68E3181138AFA7D90A5601F = { isa = PBXBuildFile; fileRef = AE956118939B54BFE22AF210; };
+	5AF3BC2A413A2E6FD1DE2BEE = {isa = PBXBuildFile; fileRef = 1B8D1BF391139E0551E2D88C; };
+	FA5026E43C0F0989AA71698C = {isa = PBXBuildFile; fileRef = E6BAAE02D587593B9F379B3A; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildFile section */
+	C4001420939B9F0C085F846E = { isa = PBXBuildFile; fileRef = E99D0D3B2924B69BD854EA81; };
+	5AF3BC2A413A2E6FD1DE2BEE = {isa = PBXBuildFile; fileRef = 1B8D1BF391139E0551E2D88C; };
+	FA5026E43C0F0989AA71698C = {isa = PBXBuildFile; fileRef = E6BAAE02D587593B9F379B3A; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildFile section */
+	67E21873D2F13BE081EA8A4B = { isa = PBXBuildFile; fileRef = 91E6EB39128545201D119EB7; };
+	5AF3BC2A413A2E6FD1DE2BEE = {isa = PBXBuildFile; fileRef = 1B8D1BF391139E0551E2D88C; };
+	FA5026E43C0F0989AA71698C = {isa = PBXBuildFile; fileRef = E6BAAE02D587593B9F379B3A; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildFile section */
+	5B029A5F12A7E8BA26CC4531 = { isa = PBXBuildFile; fileRef = E6DD7617AF45E97F4C9042B3; };
+	5AF3BC2A413A2E6FD1DE2BEE = {isa = PBXBuildFile; fileRef = 1B8D1BF391139E0551E2D88C; };
+	FA5026E43C0F0989AA71698C = {isa = PBXBuildFile; fileRef = E6BAAE02D587593B9F379B3A; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildFile section */
+	EFCA164F3F1F7157D655AF87 = { isa = PBXBuildFile; fileRef = 51F01954BD4ABEDB807EC3F3; };
+	5AF3BC2A413A2E6FD1DE2BEE = {isa = PBXBuildFile; fileRef = 1B8D1BF391139E0551E2D88C; };
+	FA5026E43C0F0989AA71698C = {isa = PBXBuildFile; fileRef = E6BAAE02D587593B9F379B3A; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildFile section */
+	0F246896A7C926EC439FFCB7 = { isa = PBXBuildFile; fileRef = BA31E534E1254A9095F77964; };
+	5AF3BC2A413A2E6FD1DE2BEE = {isa = PBXBuildFile; fileRef = 1B8D1BF391139E0551E2D88C; };
+	FA5026E43C0F0989AA71698C = {isa = PBXBuildFile; fileRef = E6BAAE02D587593B9F379B3A; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildFile section */
+	2D70C0B50522155E70FFF42C = { isa = PBXBuildFile; fileRef = 5CB20A414FC06DFE4AF5EB26; };
+	5AF3BC2A413A2E6FD1DE2BEE = {isa = PBXBuildFile; fileRef = 1B8D1BF391139E0551E2D88C; };
+	FA5026E43C0F0989AA71698C = {isa = PBXBuildFile; fileRef = E6BAAE02D587593B9F379B3A; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildFile section */
+	D1452DE6B582E2DA28599FDC = { isa = PBXBuildFile; fileRef = 889CBF0A2FE9711D86B69B11; };
+	5AF3BC2A413A2E6FD1DE2BEE = {isa = PBXBuildFile; fileRef = 1B8D1BF391139E0551E2D88C; };
+	FA5026E43C0F0989AA71698C = {isa = PBXBuildFile; fileRef = E6BAAE02D587593B9F379B3A; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildFile section */
+	A00C0324F532560BBEB3F85C = { isa = PBXBuildFile; fileRef = 77427F330C7D6C0E4F0DFFD3; };
+	5AF3BC2A413A2E6FD1DE2BEE = {isa = PBXBuildFile; fileRef = 1B8D1BF391139E0551E2D88C; };
+	FA5026E43C0F0989AA71698C = {isa = PBXBuildFile; fileRef = E6BAAE02D587593B9F379B3A; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildFile section */
+	2EE64B1D458A31AC85A34968 = { isa = PBXBuildFile; fileRef = 03F629B02D3F4ED3CD92CAA2; };
+	5AF3BC2A413A2E6FD1DE2BEE = {isa = PBXBuildFile; fileRef = 1B8D1BF391139E0551E2D88C; };
+	FA5026E43C0F0989AA71698C = {isa = PBXBuildFile; fileRef = E6BAAE02D587593B9F379B3A; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildFile section */
+	BFD3A0790DE77F8E7874F524 = { isa = PBXBuildFile; fileRef = A711DC0508312CA79963BB76; };
+	5AF3BC2A413A2E6FD1DE2BEE = {isa = PBXBuildFile; fileRef = 1B8D1BF391139E0551E2D88C; };
+	FA5026E43C0F0989AA71698C = {isa = PBXBuildFile; fileRef = E6BAAE02D587593B9F379B3A; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildFile section */
+	FB1E1EF03DE5ACD03EE0ADBE = { isa = PBXBuildFile; fileRef = ACE9C39B4EC9529BDE1EF030; };
+	5AF3BC2A413A2E6FD1DE2BEE = {isa = PBXBuildFile; fileRef = 1B8D1BF391139E0551E2D88C; };
+	FA5026E43C0F0989AA71698C = {isa = PBXBuildFile; fileRef = E6BAAE02D587593B9F379B3A; };
+/* End PBXBuildFile section */
+
+/* Begin PBXNativeTarget section */
+	C198225ED76785F1DC821B50 = { isa = PBXNativeTarget; buildConfigurationList = 5814F1804DA5AF6546A7877A; buildPhases = ( C1862110F0538B8BE470CBF9, A4592280DBD5D46DF4602A6B, A4C9CBF8919422A911CE06D8 ); buildRules = (  , 5AF3BC2A413A2E6FD1DE2BEE, FA5026E43C0F0989AA71698C); dependencies = (  , 5AF3BC2A413A2E6FD1DE2BEE, FA5026E43C0F0989AA71698C); name = SimpleNoteSwift; productName = SimpleNoteSwift; productReference = 1DC20A0AC820D8E78CFCAC0F; productType = com.apple.product-type.application; };
+/* End PBXNativeTarget section */
+
+/* Begin XCBuildConfiguration section */
+	3B896DC325C877E20E4AA28E = { isa = XCBuildConfiguration; buildSettings = { ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; CLANG_ENABLE_MODULES = YES; CURRENT_PROJECT_VERSION = 1; DEVELOPMENT_TEAM = ; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = SimpleNoteSwift/Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 15.0; LD_RUNPATH_SEARCH_PATHS = ( $(inherited), @executable_path/Frameworks ); MARKETING_VERSION = 1.0; PRODUCT_BUNDLE_IDENTIFIER = com.example.simplenoteswift; PRODUCT_NAME = $(TARGET_NAME); SWIFT_EMIT_LOC_STRINGS = NO; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 1; }; name = Debug; };
+/* End XCBuildConfiguration section */
+
+/* Begin XCBuildConfiguration section */
+	EEC14FB5ACCD74DEB54ACF18 = { isa = XCBuildConfiguration; buildSettings = { ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; CLANG_ENABLE_MODULES = YES; CURRENT_PROJECT_VERSION = 1; DEVELOPMENT_TEAM = ; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = SimpleNoteSwift/Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 15.0; LD_RUNPATH_SEARCH_PATHS = ( $(inherited), @executable_path/Frameworks ); MARKETING_VERSION = 1.0; PRODUCT_BUNDLE_IDENTIFIER = com.example.simplenoteswift; PRODUCT_NAME = $(TARGET_NAME); SWIFT_EMIT_LOC_STRINGS = NO; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 1; }; name = Release; };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+	5814F1804DA5AF6546A7877A = { isa = XCConfigurationList; buildConfigurations = ( 3B896DC325C877E20E4AA28E, EEC14FB5ACCD74DEB54ACF18 ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Debug; };
+/* End XCConfigurationList section */
+
+/* Begin XCBuildConfiguration section */
+	835B6BEF44923F88F16EAA82 = { isa = XCBuildConfiguration; buildSettings = { CLASSPREFIX = ; }; name = Debug; };
+/* End XCBuildConfiguration section */
+
+/* Begin XCBuildConfiguration section */
+	A5D4C60EC468328EC903F05E = { isa = XCBuildConfiguration; buildSettings = { CLASSPREFIX = ; }; name = Release; };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+	57023ADE09E103A392AE6DCA = { isa = XCConfigurationList; buildConfigurations = ( 835B6BEF44923F88F16EAA82, A5D4C60EC468328EC903F05E ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Debug; };
+/* End XCConfigurationList section */
+
+/* Begin PBXProject section */
+	F081BE4F6172DBD6DCB09BE1 = { isa = PBXProject; attributes = { LastUpgradeCheck = 1500; ORGANIZATIONNAME = Example; }; buildConfigurationList = 57023ADE09E103A392AE6DCA; compatibilityVersion = Xcode 14.0; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = ( en ); mainGroup = BB4ED005FC7DB2B72B148931; productRefGroup = FE01BA5E1D72439BA221666E; projectDirPath = ; projectRoot = ; targets = ( C198225ED76785F1DC821B50 ); };
+/* End PBXProject section */
+
+};
+rootObject = F081BE4F6172DBD6DCB09BE1;
+}

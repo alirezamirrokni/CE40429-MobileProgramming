@@ -183,21 +183,3 @@ From there, download the OpenAPI spec and import it into Postman (**Import → O
 - **SQLite file location**  
   The database is created under the app’s Documents directory as `simplenote.sqlite`.
 
----
-
-## 📸 Screenshots
-
-> Add your app screenshots here once you run on simulator/device.
-
----
-
-## 📄 License
-
-MIT (or align with your original Kotlin project license).
-
----
-
-## 🙌 Credits
-
-- Original Kotlin project: **SimpleNote**
-- Swift port: this repository

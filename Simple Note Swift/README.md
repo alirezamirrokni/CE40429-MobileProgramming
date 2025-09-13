@@ -66,7 +66,7 @@ SimpleNoteSwift/
 
 ## 🧭 Architecture
 
-```mermaid
+```
 flowchart LR
     A[SwiftUI Views] --> B[Repository]
     B --> C[APIClient\nURLSession async/await]
